@@ -22,11 +22,11 @@ $factory->define(App\Dealcloser\Core\User\User::class, function (Faker\Generator
         'email'             => $faker->unique()->safeEmail,
         'password'          => $password ?: $password = bcrypt('secret'),
         'remember_token'    => str_random(10),
-        'confirmation_code' => str_random(10)
+        'confirmation_code' => str_random(10),
     ];
 });
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
+/* @var \Illuminate\Database\Eloquent\Factory $factory */
 $factory->define(App\Dealcloser\Core\Settings\Settings::class, function (Faker\Generator $faker) {
     return [
         'name'          => $faker->company,
@@ -37,6 +37,6 @@ $factory->define(App\Dealcloser\Core\Settings\Settings::class, function (Faker\G
         'zip'           => $faker->postcode,
         'city'          => $faker->city,
         'kvk'           => $faker->numberBetween(1, 10),
-        'btw'           => $faker->numberBetween(1, 10)
+        'btw'           => $faker->numberBetween(1, 10),
     ];
 });

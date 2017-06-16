@@ -2,8 +2,8 @@
 
 namespace App\Dealcloser\Core\Settings;
 
-use Illuminate\Support\Facades\Cache;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
 
 class Settings extends Model
 {
@@ -26,7 +26,7 @@ class Settings extends Model
         'users',
         'domain',
         'active',
-        'license'
+        'license',
     ];
 
     public function scopeSet($query, $data)

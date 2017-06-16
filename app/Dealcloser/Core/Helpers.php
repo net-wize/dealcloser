@@ -1,13 +1,14 @@
 <?php
 
+use App\Dealcloser\Core\Settings\Settings;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Request;
-use App\Dealcloser\Core\Settings\Settings;
 
-if ( ! function_exists('setActive')) {
+if (!function_exists('setActive')) {
     /**
      * @param $path
      * @param string $active
+     *
      * @return string
      */
     function setActive($path, $active = 'is-active')
@@ -16,7 +17,7 @@ if ( ! function_exists('setActive')) {
     }
 }
 
-if ( ! function_exists('settings')) {
+if (!function_exists('settings')) {
     /**
      * @return mixed
      */

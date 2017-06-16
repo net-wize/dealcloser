@@ -10,9 +10,10 @@ class RoleMiddleware
     /**
      * Handle an incoming request.
      *
-     * @param  \Illuminate\Http\Request $request
-     * @param  \Closure $next
+     * @param \Illuminate\Http\Request $request
+     * @param \Closure                 $next
      * @param $role
+     *
      * @return mixed
      */
     public function handle($request, Closure $next, $role)
@@ -21,7 +22,7 @@ class RoleMiddleware
             return redirect('/');
         }
 
-        if (! $request->user()->hasRole($role)) {
+        if (!$request->user()->hasRole($role)) {
             return back()
                 ->with('status', 'Niet geautoriseerd!');
         }

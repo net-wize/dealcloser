@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Auth;
 
-use Illuminate\Http\Request;
 use App\Dealcloser\Core\User\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Auth\Events\Registered;
-use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
 {
@@ -73,7 +73,7 @@ class RegisterController extends Controller
             'last_name' => $data['last_name'],
             'email'     => $data['email'],
             'password'  => bcrypt($data['password']),
-            'function'  => $data['function']
+            'function'  => $data['function'],
         ]);
     }
 
@@ -90,7 +90,8 @@ class RegisterController extends Controller
     /**
      * Handle a registration request for the application.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
+     *
      * @return \Illuminate\Http\Response
      */
     public function register(Request $request)

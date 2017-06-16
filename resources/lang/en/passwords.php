@@ -14,8 +14,8 @@ return [
     */
 
     'password' => 'Wachtwoord moet minimaal uit 6 tekens bestaan, en gelijk zijn aan het bevestigde wachtwoord.',
-    'reset' => 'Uw wachtwoord is gereset!',
-    'sent' => 'Er is succesvol een wachtwoord reset link verzonden naar uw e-mail adres!',
-    'token' => 'De wachtwoord reset token is ongeldig.',
-    'user' => "We kunnen geen gebruiker vinden met dit e-mail adres.",
+    'reset'    => 'Uw wachtwoord is gereset!',
+    'sent'     => 'Er is succesvol een wachtwoord reset link verzonden naar uw e-mail adres!',
+    'token'    => 'De wachtwoord reset token is ongeldig.',
+    'user'     => 'We kunnen geen gebruiker vinden met dit e-mail adres.',
 ];
