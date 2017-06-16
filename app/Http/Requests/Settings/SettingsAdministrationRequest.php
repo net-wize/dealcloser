@@ -25,7 +25,7 @@ class SettingsAdministrationRequest extends FormRequest
     {
         return [
             'kvk' => 'max:20',
-            'btw' => 'max:20'
+            'btw' => 'max:20',
         ];
     }
 }

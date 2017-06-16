@@ -28,7 +28,7 @@ class SettingsProfileRequest extends FormRequest
             'email'         => 'max:50|email',
             'phone'         => 'max:20',
             'website'       => 'max:50|url',
-            'description'   => 'max:500'
+            'description'   => 'max:500',
         ];
     }
 }

@@ -26,7 +26,7 @@ class SettingsLocationRequest extends FormRequest
         return [
             'address'   => 'max:30',
             'zip'       => 'max:10',
-            'city'      => 'max:30'
+            'city'      => 'max:30',
         ];
     }
 }

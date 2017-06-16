@@ -2,9 +2,9 @@
 
 namespace Tests\Feature;
 
-use Tests\TestCase;
 use App\Dealcloser\Core\User\User;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Tests\TestCase;
 
 class SettingsTest extends TestCase
 {
@@ -22,9 +22,8 @@ class SettingsTest extends TestCase
             'email'         => 'info@company.com',
             'phone'         => '0623844932',
             'website'       => 'domain.com',
-            'description'   => 'A short description'
+            'description'   => 'A short description',
         ];
-
 
         $this->patch('/instellingen/profiel', $settings)
             ->assertSessionHas('status', 'Bedrijfsprofiel geupdatet!');
@@ -44,9 +43,8 @@ class SettingsTest extends TestCase
             'email'         => 'info@company.com',
             'phone'         => '0623844932',
             'website'       => 'domain.com',
-            'description'   => 'A short description'
+            'description'   => 'A short description',
         ];
-
 
         $this->patch('/instellingen/profiel', $settings)
             ->assertSessionHas('status', 'Niet geautoriseerd!')
@@ -64,9 +62,8 @@ class SettingsTest extends TestCase
 
         $settings = [
             'kvk'           => '8a9sdfasdf9jnkasa',
-            'btw'           => 'asdf0asf9uasodfas'
+            'btw'           => 'asdf0asf9uasodfas',
         ];
-
 
         $this->patch('/instellingen/administratie', $settings)
             ->assertSessionHas('status', 'Bedrijfsadministratie geupdatet!');
@@ -83,9 +80,8 @@ class SettingsTest extends TestCase
 
         $settings = [
             'kvk'           => '8a9sdfasdf9jnkasa',
-            'btw'           => 'asdf0asf9uasodfas'
+            'btw'           => 'asdf0asf9uasodfas',
         ];
-
 
         $this->patch('/instellingen/administratie', $settings)
             ->assertSessionHas('status', 'Niet geautoriseerd!')
@@ -104,9 +100,8 @@ class SettingsTest extends TestCase
         $settings = [
             'address'   => 'Boschlaan 10',
             'zip'       => '5993HK',
-            'city'      => 'Maasbree'
+            'city'      => 'Maasbree',
         ];
-
 
         $this->patch('/instellingen/locatie', $settings)
             ->assertSessionHas('status', 'Bedrijfslocatie geupdatet!');
@@ -124,9 +119,8 @@ class SettingsTest extends TestCase
         $settings = [
             'address'   => 'Boschlaan 10',
             'zip'       => '5993HK',
-            'city'      => 'Maasbree'
+            'city'      => 'Maasbree',
         ];
-
 
         $this->patch('/instellingen/locatie', $settings)
             ->assertSessionHas('status', 'Niet geautoriseerd!')

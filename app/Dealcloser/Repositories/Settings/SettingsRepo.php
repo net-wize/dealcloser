@@ -6,6 +6,5 @@ class SettingsRepo
 {
     public function update(array $settings)
     {
-
     }
 }

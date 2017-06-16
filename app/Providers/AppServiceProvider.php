@@ -2,10 +2,10 @@
 
 namespace App\Providers;
 
-use Carbon\Carbon;
-use Illuminate\Support\ServiceProvider;
 use App\Dealcloser\Core\Settings\Settings;
 use App\Dealcloser\Validation\DomainValidation;
+use Carbon\Carbon;
+use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,6 +13,7 @@ class AppServiceProvider extends ServiceProvider
      * Bootstrap any application services.
      *
      * @param DomainValidation $domainValidation
+     *
      * @return void
      */
     public function boot(DomainValidation $domainValidation)
