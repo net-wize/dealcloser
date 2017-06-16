@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\settings;
 
-use App\Http\Controllers\Controller;
 use App\Dealcloser\Core\Settings\Settings;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\Settings\SettingsUsageRequest;
 
 class SettingsUsageController extends Controller
@@ -31,6 +31,7 @@ class SettingsUsageController extends Controller
      * Update corporation profile settings.
      *
      * @param SettingsUsageRequest $request
+     *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function update(SettingsUsageRequest $request)

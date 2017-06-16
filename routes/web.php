@@ -15,13 +15,11 @@
 | Login / Logout
 */
 
-use Spatie\Permission\Models\Role;
-
 $login = 'Auth\LoginController@';
 
-Route::get('/',         $login . 'showLoginForm')->name('login');
-Route::post('/',        $login . 'login');
-Route::get('logout',    $login . 'logout')->name('logout');
+Route::get('/', $login.'showLoginForm')->name('login');
+Route::post('/', $login.'login');
+Route::get('logout', $login.'logout')->name('logout');
 
 /*
 | Password reset
@@ -30,9 +28,9 @@ Route::get('logout',    $login . 'logout')->name('logout');
 $forgotPasswordWeb = 'Auth\ForgotPasswordController@';
 $passwordReset = 'Auth\ResetPasswordController@';
 
-Route::post('password/reset',               $forgotPasswordWeb . 'sendResetLinkEmail')->name('password.email');
-Route::post('wachtwoord/reset/{token}',     $passwordReset     . 'reset')->name('password.reset');
-Route::get('wachtwoord/reset/{token}',      $passwordReset     . 'showResetForm');
+Route::post('password/reset', $forgotPasswordWeb.'sendResetLinkEmail')->name('password.email');
+Route::post('wachtwoord/reset/{token}', $passwordReset.'reset')->name('password.reset');
+Route::get('wachtwoord/reset/{token}', $passwordReset.'showResetForm');
 
 /*
 | Register
@@ -49,10 +47,9 @@ Route::get('info', 'Info\InfoController@info')
     ->name('info.info');
 
 Route::group(['middleware' => ['auth', 'throttle:100', 'CheckIfApplicationIsActive']], function () {
-    Route::get('dashboard', function() {
+    Route::get('dashboard', function () {
         return view('dashboard/dashboard');
     })->name('dashboard');
-
 
     /*
     | Settings
@@ -74,5 +71,3 @@ Route::group(['middleware' => ['auth', 'throttle:100', 'CheckIfApplicationIsActi
         ->name('settings.usage');
     Route::patch('instellingen/gebruik', 'Settings\SettingsUsageController@update');
 });
-
-

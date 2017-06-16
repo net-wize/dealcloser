@@ -3,8 +3,8 @@
 namespace Tests\Feature;
 
 use DB;
-use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Tests\TestCase;
 
 class PasswordResetTest extends TestCase
 {
@@ -20,11 +20,11 @@ class PasswordResetTest extends TestCase
         $response
             ->assertStatus(200)
             ->assertJson([
-                'success' => 'Check uw email'
+                'success' => 'Check uw email',
             ]);
 
         $this->assertDatabaseHas('password_resets', [
-            'email' => $user->email
+            'email' => $user->email,
         ]);
     }
 
@@ -36,7 +36,7 @@ class PasswordResetTest extends TestCase
         $response
             ->assertStatus(422)
             ->assertJson([
-                'error' => 'We kunnen geen gebruiker vinden met dit e-mail adres.'
+                'error' => 'We kunnen geen gebruiker vinden met dit e-mail adres.',
             ]);
     }
 

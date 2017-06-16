@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\settings;
 
-use App\Http\Controllers\Controller;
 use App\Dealcloser\Core\Settings\Settings;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\settings\SettingsLocationRequest;
 
 class SettingsLocationController extends Controller
@@ -31,6 +31,7 @@ class SettingsLocationController extends Controller
      * Update corporation location settings.
      *
      * @param SettingsLocationRequest $request
+     *
      * @return \Illuminate\Http\RedirectResponse
      */
     public function update(SettingsLocationRequest $request)

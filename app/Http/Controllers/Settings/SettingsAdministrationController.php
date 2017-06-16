@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\settings;
 
-use App\Http\Controllers\Controller;
 use App\Dealcloser\Core\Settings\Settings;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\Settings\SettingsAdministrationRequest;
 
 class SettingsAdministrationController extends Controller
@@ -31,6 +31,7 @@ class SettingsAdministrationController extends Controller
      * Update corporation administration settings.
      *
      * @param SettingsAdministrationRequest $request
+     *
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function update(SettingsAdministrationRequest $request)
