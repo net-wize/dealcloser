@@ -2,7 +2,6 @@
 
 namespace App\Http\Middleware;
 
-use Carbon\Carbon;
 use Closure;
 
 class CheckIfApplicationIsActive
@@ -17,7 +16,7 @@ class CheckIfApplicationIsActive
      */
     public function handle($request, Closure $next)
     {
-        if(appIsActive(settings()->active, $request->user())) {
+        if (appIsActive(settings()->active, $request->user())) {
             return $next($request);
         }
 
