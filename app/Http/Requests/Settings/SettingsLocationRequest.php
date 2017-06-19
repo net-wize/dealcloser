@@ -24,9 +24,9 @@ class SettingsLocationRequest extends FormRequest
     public function rules()
     {
         return [
-            'address'   => 'max:30',
-            'zip'       => 'max:10',
-            'city'      => 'max:30',
+            'address'   => 'max:30|nullable',
+            'zip'       => 'max:10|nullable',
+            'city'      => 'max:30|nullable',
         ];
     }
 }

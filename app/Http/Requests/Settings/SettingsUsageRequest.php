@@ -24,10 +24,10 @@ class SettingsUsageRequest extends FormRequest
     public function rules()
     {
         return [
-            'users'          => 'integer',
-            'domain'         => 'max:50',
+            'users'          => 'integer|nullable',
+            'domain'         => 'max:500|nullable',
             'active'         => 'max:50|date|nullable',
-            'license'        => 'max:50',
+            'license'        => 'max:50|nullable',
         ];
     }
 }

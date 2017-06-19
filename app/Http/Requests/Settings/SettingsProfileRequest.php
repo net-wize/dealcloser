@@ -24,11 +24,11 @@ class SettingsProfileRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'          => 'max:50',
-            'email'         => 'max:50|email',
-            'phone'         => 'max:20',
-            'website'       => 'max:50|url',
-            'description'   => 'max:500',
+            'name'          => 'max:50|nullable',
+            'email'         => 'max:50|email|nullable',
+            'phone'         => 'max:20|nullable',
+            'website'       => 'max:50|url|nullable',
+            'description'   => 'max:500|nullable',
         ];
     }
 }

@@ -24,8 +24,8 @@ class SettingsAdministrationRequest extends FormRequest
     public function rules()
     {
         return [
-            'kvk' => 'max:20',
-            'btw' => 'max:20',
+            'kvk' => 'max:20|nullable',
+            'btw' => 'max:20|nullable',
         ];
     }
 }
