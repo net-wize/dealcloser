@@ -17,12 +17,12 @@
 
 $login = 'Auth\LoginController@';
 
-Route::get('/', $login. 'showLoginForm')
+Route::get('/', $login.'showLoginForm')
     ->name('login');
 
-Route::post('/', $login. 'login');
+Route::post('/', $login.'login');
 
-Route::get('logout', $login. 'logout')
+Route::get('logout', $login.'logout')
     ->name('logout');
 
 /*

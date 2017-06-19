@@ -63,7 +63,7 @@ class LoginController extends Controller
      */
     protected function authenticated(Request $request, $user)
     {
-        if(! appIsActive(settings()->active, $user)) {
+        if (!appIsActive(settings()->active, $user)) {
             auth()->logout();
 
             return redirect('/')
