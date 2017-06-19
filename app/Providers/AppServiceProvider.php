@@ -2,7 +2,6 @@
 
 namespace App\Providers;
 
-use App\Dealcloser\Core\Settings\Settings;
 use App\Dealcloser\Validation\DomainValidation;
 use Carbon\Carbon;
 use Illuminate\Support\ServiceProvider;
