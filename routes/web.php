@@ -17,9 +17,13 @@
 
 $login = 'Auth\LoginController@';
 
-Route::get('/', $login.'showLoginForm')->name('login');
-Route::post('/', $login.'login');
-Route::get('logout', $login.'logout')->name('logout');
+Route::get('/', $login. 'showLoginForm')
+    ->name('login');
+
+Route::post('/', $login. 'login');
+
+Route::get('logout', $login. 'logout')
+    ->name('logout');
 
 /*
 | Password reset
