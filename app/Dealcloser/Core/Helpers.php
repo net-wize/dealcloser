@@ -1,6 +1,7 @@
 <?php
 
 use App\Dealcloser\Core\Settings\Settings;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Request;
 
@@ -26,5 +27,16 @@ if (!function_exists('settings')) {
         return Cache::rememberForever('settings', function () {
             return Settings::first();
         });
+    }
+}
+
+if (!function_exists('appIsActive')) {
+    function appIsActive($date, $user)
+    {
+        if (is_null($date) || $date > Carbon::now() || $user->hasRole('super-admin')) {
+            return true;
+        }
+
+        return false;
     }
 }

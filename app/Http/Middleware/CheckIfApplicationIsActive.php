@@ -2,7 +2,6 @@
 
 namespace App\Http\Middleware;
 
-use Auth;
 use Carbon\Carbon;
 use Closure;
 
@@ -18,13 +17,11 @@ class CheckIfApplicationIsActive
      */
     public function handle($request, Closure $next)
     {
-        $date = settings()->active;
-
-        if (is_null($date) || $date > Carbon::now() || $request->user()->hasRole('super-admin')) {
+        if(appIsActive(settings()->active, $request->user())) {
             return $next($request);
         }
 
-        Auth::logout();
+        auth()->logout();
 
         return redirect('/')
             ->with(['status' => 'Applicatie is niet actief, contacteer de beheerder', 'class' => 'is-danger']);

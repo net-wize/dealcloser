@@ -63,6 +63,13 @@ class LoginController extends Controller
      */
     protected function authenticated(Request $request, $user)
     {
+        if(! appIsActive(settings()->active, $user)) {
+            auth()->logout();
+
+            return redirect('/')
+                ->with(['status' => 'Applicatie is niet actief, contacteer de beheerder', 'class' => 'is-danger']);
+        }
+
         session()->flash('status', sprintf('Welkom %s', $user->name));
     }
 
