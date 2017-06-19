@@ -48,7 +48,7 @@ class CreateSettingsTable extends Migration
             $table->integer('users')
                 ->nullable();
 
-            $table->string('domain', 50)
+            $table->string('domain', 500)
                 ->nullable();
 
             $table->string('license', 50)
